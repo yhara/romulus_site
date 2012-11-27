@@ -11,9 +11,25 @@
   </head>
   <body>
     <h1>My Header</h1>
-    <h2>Hello</h2>
-<p>Hi
-</p>
+    <h2>Steps</h2>
+<ol>
+<li><p>npm install -g romulus</p>
+</li>
+<li><p>Create files in pages/ (and in public/, layouts/ if you want)</p>
+</li>
+<li><p>romulus[Enter] -&gt; local server starts on <a href="http://localhost:8080/">http://localhost:8080/</a></p>
+</li>
+<li><p>romulus build [dirname=./build/] -&gt; static html is generated</p>
+</li>
+<li><p>Deploy!</p>
+<ol>
+<li>Create github repository if not yet</li>
+<li>Set branch.master.remote by <code>git config branch.master.remote origin</code></li>
+<li>Do <code>rm -r ./build</code> because <code>romulus deploy</code> uses ./build as temporary directory</li>
+<li>Finally, <code>romulus deploy</code> will create local orphan branch and pushes it to <code>origin/gh-pages</code></li>
+</ol>
+</li>
+</ol>
 
   </body>
 </html>
